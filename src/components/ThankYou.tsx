@@ -46,10 +46,10 @@ export const ThankYou: React.FC<ThankYouProps> = ({ kycData, onRestart, scannerT
   return (
     <div className="h-screen flex flex-col bg-white">
       {/* Header */}
-      <div className="flex-shrink-0 bg-white border-b border-gray-200 px-4 py-2">
+      <div className="flex-shrink-0 bg-white border-b border-gray-200 px-4 py-3">
         <div className="flex justify-center">
           <img
-            className="h-6"
+            className="h-8"
             src="https://www.idmerit.com/wp-content/themes/idmerit/images/idmerit-logo.svg"
             alt="IDMerit Logo"
           />
@@ -148,11 +148,11 @@ export const ThankYou: React.FC<ThankYouProps> = ({ kycData, onRestart, scannerT
       </div>
 
       {/* Footer */}
-      <div className="flex-shrink-0 bg-white border-t border-gray-200 px-4 py-2">
+      <div className="flex-shrink-0 bg-white border-t border-gray-200 px-4 py-3">
         <div className="flex justify-center items-center gap-2">
           <span className="text-xs text-gray-500">Powered by</span>
           <img
-            className="h-4"
+            className="h-6"
             src="https://www.idmerit.com/wp-content/themes/idmerit/images/idmerit-logo.svg"
             alt="IDMerit Logo"
           />

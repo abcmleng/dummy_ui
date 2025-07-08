@@ -88,9 +88,9 @@ export const SelfieCapture: React.FC<SelfieCaptureProps> = ({
     return (
       <div className="h-screen flex flex-col bg-white">
         {/* Header */}
-        <div className="flex-shrink-0 bg-white border-b border-gray-200 px-2 py-1">
+        <div className="flex-shrink-0 bg-white border-b border-gray-200 px-4 py-3">
           <div className="flex justify-center">
-            <img className="h-4" src="https://www.idmerit.com/wp-content/themes/idmerit/images/idmerit-logo.svg" alt="IDMerit Logo" />
+            <img className="h-8" src="https://www.idmerit.com/wp-content/themes/idmerit/images/idmerit-logo.svg" alt="IDMerit Logo" />
           </div>
         </div>
 
@@ -112,10 +112,10 @@ export const SelfieCapture: React.FC<SelfieCaptureProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="flex-shrink-0 bg-white border-t border-gray-200 px-2 py-1">
+        <div className="flex-shrink-0 bg-white border-t border-gray-200 px-4 py-3">
           <div className="flex justify-center items-center gap-1">
-            <span className="text-[10px] text-gray-500">Powered by</span>
-            <img className="h-3" src="https://www.idmerit.com/wp-content/themes/idmerit/images/idmerit-logo.svg" alt="IDMerit Logo" />
+            <span className="text-xs text-gray-500">Powered by</span>
+            <img className="h-6" src="https://www.idmerit.com/wp-content/themes/idmerit/images/idmerit-logo.svg" alt="IDMerit Logo" />
           </div>
         </div>
       </div>
