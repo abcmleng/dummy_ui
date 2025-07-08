@@ -49,9 +49,9 @@ export const DocumentSelection: React.FC<DocumentSelectionProps> = ({
   };
 
   return (
-    <div className="h-screen flex flex-col bg-gradient-to-br from-indigo-50 to-purple-100">
+    <div className="h-screen flex flex-col bg-white">
       {/* Header */}
-      <div className="flex-shrink-0 bg-white shadow-sm border-b border-gray-200 px-4 py-2">
+      <div className="flex-shrink-0 bg-white border-b border-gray-200 px-4 py-2">
         <div className="flex justify-center">
           <img
             className="h-6"
@@ -64,12 +64,12 @@ export const DocumentSelection: React.FC<DocumentSelectionProps> = ({
       {/* Main Content */}
       <div className="flex-1 flex flex-col justify-center p-3 min-h-0 overflow-hidden">
         <div className="w-full max-w-md mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
             {/* Title Section */}
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-4 text-center">
+            <div className="bg-blue-600 px-4 py-4 text-center">
               <FileText className="w-8 h-8 mx-auto mb-2 text-white" />
               <h1 className="text-lg font-bold text-white mb-1">Select Document Type</h1>
-              <p className="text-indigo-100 text-xs">Choose the type of document you want to verify</p>
+              <p className="text-blue-100 text-xs">Choose the type of document you want to verify</p>
             </div>
 
             {/* Document Options */}
@@ -83,19 +83,19 @@ export const DocumentSelection: React.FC<DocumentSelectionProps> = ({
                   {documentTypes.map((docType) => (
                     <button
                       key={docType.value}
-                      className="w-full p-3 border-2 border-gray-200 rounded-lg text-left hover:border-indigo-300 hover:bg-indigo-50 transition-all duration-200 group focus:outline-none focus:ring-3 focus:ring-indigo-200"
+                      className="w-full p-3 border-2 border-gray-200 rounded-lg text-left hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group focus:outline-none focus:ring-3 focus:ring-blue-200"
                       onClick={() => handleDocumentSelect(docType.value)}
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <h3 className="font-semibold text-gray-900 group-hover:text-indigo-700 text-sm">
+                          <h3 className="font-semibold text-gray-900 group-hover:text-blue-700 text-sm">
                             {docType.label}
                           </h3>
                           <p className="text-xs text-gray-500 mt-1">
                             Verify your {docType.label.toLowerCase()}
                           </p>
                         </div>
-                        <div className="w-5 h-5 border-2 border-gray-300 rounded-full group-hover:border-indigo-500 transition-colors duration-200"></div>
+                        <div className="w-5 h-5 border-2 border-gray-300 rounded-full group-hover:border-blue-500 transition-colors duration-200"></div>
                       </div>
                     </button>
                   ))}

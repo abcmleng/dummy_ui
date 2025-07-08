@@ -32,9 +32,9 @@ export const CountrySelection: React.FC<CountrySelectionProps> = ({
   };
 
   return (
-    <div className="h-screen flex flex-col bg-gradient-to-br from-emerald-50 to-teal-100">
+    <div className="h-screen flex flex-col bg-white">
       {/* Header */}
-      <div className="flex-shrink-0 bg-white shadow-sm border-b border-gray-200 px-4 py-2">
+      <div className="flex-shrink-0 bg-white border-b border-gray-200 px-4 py-2">
         <div className="flex justify-center">
           <img
             className="h-6"
@@ -47,12 +47,12 @@ export const CountrySelection: React.FC<CountrySelectionProps> = ({
       {/* Main Content */}
       <div className="flex-1 flex flex-col justify-center p-3 min-h-0 overflow-hidden">
         <div className="w-full max-w-md mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
             {/* Title Section */}
-            <div className="bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-4 text-center">
+            <div className="bg-blue-600 px-4 py-4 text-center">
               <Globe className="w-8 h-8 mx-auto mb-2 text-white" />
               <h1 className="text-lg font-bold text-white mb-1">Select Your Country</h1>
-              <p className="text-emerald-100 text-xs">Choose your country to continue verification</p>
+              <p className="text-blue-100 text-xs">Choose your country to continue verification</p>
             </div>
 
             {/* Selection Section */}
@@ -62,7 +62,7 @@ export const CountrySelection: React.FC<CountrySelectionProps> = ({
                   Country of Document
                 </label>
                 <select
-                  className="w-full px-3 py-3 border-2 border-gray-200 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-3 focus:ring-emerald-200 focus:border-emerald-500 transition-all duration-200 bg-white shadow-sm text-sm"
+                  className="w-full px-3 py-3 border-2 border-gray-200 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-3 focus:ring-blue-200 focus:border-blue-500 transition-all duration-200 bg-white text-sm"
                   value={selectedCountryCode || ''}
                   onChange={handleChange}
                 >
@@ -78,10 +78,10 @@ export const CountrySelection: React.FC<CountrySelectionProps> = ({
               </div>
 
               {selectedCountryCode && (
-                <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                    <span className="text-emerald-800 font-medium text-xs">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span className="text-blue-800 font-medium text-xs">
                       Country selected: {countries.find(([code]) => code === selectedCountryCode)?.[1]}
                     </span>
                   </div>

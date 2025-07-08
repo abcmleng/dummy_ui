@@ -86,9 +86,9 @@ export const SelfieCapture: React.FC<SelfieCaptureProps> = ({
 
   if (captureError) {
     return (
-      <div className="h-screen flex flex-col bg-slate-50">
+      <div className="h-screen flex flex-col bg-white">
         {/* Header */}
-        <div className="flex-shrink-0 bg-white shadow-sm border-b border-gray-200 px-2 py-1">
+        <div className="flex-shrink-0 bg-white border-b border-gray-200 px-2 py-1">
           <div className="flex justify-center">
             <img className="h-4" src="https://www.idmerit.com/wp-content/themes/idmerit/images/idmerit-logo.svg" alt="IDMerit Logo" />
           </div>
@@ -96,7 +96,7 @@ export const SelfieCapture: React.FC<SelfieCaptureProps> = ({
 
         {/* Error Content */}
         <div className="flex-1 flex items-center justify-center p-2 min-h-0">
-          <div className="w-full max-w-xs bg-white rounded-xl shadow p-3">
+          <div className="w-full max-w-xs bg-white border border-gray-200 rounded-xl p-3">
             <ErrorPage
               error={captureError}
               onRetry={() => {
@@ -123,9 +123,9 @@ export const SelfieCapture: React.FC<SelfieCaptureProps> = ({
   }
 
   return (
-    <div className="h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="h-screen flex flex-col bg-white">
       {/* Header */}
-      <div className="flex-shrink-0 bg-white shadow-sm border-b border-gray-200 px-2 py-1">
+      <div className="flex-shrink-0 bg-white border-b border-gray-200 px-2 py-1">
         <div className="flex justify-center">
           <img className="h-6" src="https://www.idmerit.com/wp-content/themes/idmerit/images/idmerit-logo.svg" alt="IDMerit Logo" />
         </div>
@@ -134,9 +134,9 @@ export const SelfieCapture: React.FC<SelfieCaptureProps> = ({
       {/* Main Content */}
       <div className="flex-1 flex flex-col justify-center p-2 min-h-0 overflow-hidden">
         <div className="w-full max-w-xs mx-auto">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
             {/* Title */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-3 py-2 text-center">
+            <div className="bg-blue-600 px-3 py-2 text-center">
               <Camera className="w-5 h-5 mx-auto mb-1 text-white" />
               <h1 className="text-sm font-semibold text-white mb-0.5">Take Your Selfie</h1>
               <p className="text-blue-100 text-[10px]">Position your face within the oval frame</p>
@@ -156,9 +156,8 @@ export const SelfieCapture: React.FC<SelfieCaptureProps> = ({
                       style={{ transform: 'scaleX(-1)' }}
                     />
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="border-2 border-white/60 rounded-full w-60 h-80 shadow" />
-                  </div>
-
+                      <div className="border-2 border-white/60 rounded-full w-60 h-80" />
+                    </div>
 
                     {isLoading && (
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
@@ -183,7 +182,7 @@ export const SelfieCapture: React.FC<SelfieCaptureProps> = ({
                   <button
                     onClick={handleCapture}
                     disabled={!isStreaming || isCapturing}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-400 text-white font-medium py-2 px-3 rounded-md transition-all duration-200 flex items-center justify-center gap-1 shadow text-xs"
+                    className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-medium py-2 px-3 rounded-md transition-all duration-200 flex items-center justify-center gap-1 text-xs"
                   >
                     {isCapturing ? (
                       <>
@@ -200,7 +199,7 @@ export const SelfieCapture: React.FC<SelfieCaptureProps> = ({
                 ) : (
                   <button
                     onClick={handleRetake}
-                    className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-medium py-2 px-3 rounded-md transition-all duration-200 shadow text-xs"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-3 rounded-md transition-all duration-200 text-xs"
                   >
                     Retake Photo
                   </button>

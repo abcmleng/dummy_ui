@@ -8,7 +8,7 @@ const styles = {
     height: '100vh',
     width: '100vw',
     overflow: 'hidden',
-    backgroundColor: '#f8fafc',
+    backgroundColor: '#ffffff',
     position: 'fixed' as const,
     top: 0,
     left: 0,

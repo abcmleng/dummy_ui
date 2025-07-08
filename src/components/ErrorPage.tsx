@@ -15,11 +15,11 @@ interface ErrorPageProps {
 const getErrorIcon = (type: CaptureError['type']) => {
   switch (type) {
     case 'camera':
-      return <span role="img" aria-label="camera" style={{ fontSize: '48px', color: 'red' }}>📷</span>;
+      return <span role="img" aria-label="camera" style={{ fontSize: '48px', color: '#dc2626' }}>📷</span>;
     case 'network':
-      return <span role="img" aria-label="network" style={{ fontSize: '48px', color: 'red' }}>📡</span>;
+      return <span role="img" aria-label="network" style={{ fontSize: '48px', color: '#dc2626' }}>📡</span>;
     default:
-      return <span role="img" aria-label="alert" style={{ fontSize: '48px', color: 'red' }}>⚠️</span>;
+      return <span role="img" aria-label="alert" style={{ fontSize: '48px', color: '#dc2626' }}>⚠️</span>;
   }
 };
 

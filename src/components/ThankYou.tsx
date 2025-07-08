@@ -44,9 +44,9 @@ export const ThankYou: React.FC<ThankYouProps> = ({ kycData, onRestart, scannerT
   };
 
   return (
-    <div className="h-screen flex flex-col bg-gradient-to-br from-emerald-50 to-cyan-100">
+    <div className="h-screen flex flex-col bg-white">
       {/* Header */}
-      <div className="flex-shrink-0 bg-white shadow-sm border-b border-gray-200 px-4 py-2">
+      <div className="flex-shrink-0 bg-white border-b border-gray-200 px-4 py-2">
         <div className="flex justify-center">
           <img
             className="h-6"
@@ -59,61 +59,61 @@ export const ThankYou: React.FC<ThankYouProps> = ({ kycData, onRestart, scannerT
       {/* Main Content */}
       <div className="flex-1 flex flex-col justify-center p-3 min-h-0 overflow-hidden">
         <div className="w-full max-w-md mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
             {isProcessing ? (
               <div className="p-6 text-center">
                 <div className="mb-4">
-                  <div className="animate-spin rounded-full h-12 w-12 border-3 border-emerald-500 border-t-transparent mx-auto"></div>
+                  <div className="animate-spin rounded-full h-12 w-12 border-3 border-blue-500 border-t-transparent mx-auto"></div>
                 </div>
                 <h2 className="text-lg font-bold text-gray-800 mb-3">Processing Verification</h2>
                 <p className="text-gray-600 mb-4 text-sm">
                   Please wait while we verify your documents...
                 </p>
                 <div className="bg-gray-100 rounded-full h-2">
-                  <div className="bg-emerald-500 rounded-full h-2 animate-pulse" style={{ width: '70%' }}></div>
+                  <div className="bg-blue-500 rounded-full h-2 animate-pulse" style={{ width: '70%' }}></div>
                 </div>
               </div>
             ) : (
               <>
                 {/* Success Section */}
-                <div className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-4 py-4 text-center">
+                <div className="bg-blue-600 px-4 py-4 text-center">
                   <CheckCircle className="w-10 h-10 mx-auto mb-2 text-white" />
                   <h1 className="text-lg font-bold text-white mb-1">Verification Complete!</h1>
-                  <p className="text-emerald-100 text-xs">
+                  <p className="text-blue-100 text-xs">
                     Your KYC verification has been successfully processed
                   </p>
                   {scannerType === 'mrz' && (
-                    <p className="text-emerald-100 font-semibold mt-1 text-xs">MRZ Scan Completed</p>
+                    <p className="text-blue-100 font-semibold mt-1 text-xs">MRZ Scan Completed</p>
                   )}
                   {scannerType === 'barcode' && (
-                    <p className="text-emerald-100 font-semibold mt-1 text-xs">Barcode Scan Completed</p>
+                    <p className="text-blue-100 font-semibold mt-1 text-xs">Barcode Scan Completed</p>
                   )}
                 </div>
 
                 {/* Summary Section */}
                 <div className="p-4">
-                  <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-3 mb-4">
-                    <h3 className="font-semibold text-emerald-800 mb-2 text-sm">Verification Summary</h3>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                    <h3 className="font-semibold text-blue-800 mb-2 text-sm">Verification Summary</h3>
                     <div className="space-y-1 text-xs">
                       <div className="flex justify-between">
                         <span className="text-gray-600">Verification ID:</span>
-                        <span className="font-mono text-emerald-700 text-xs">{kycData.verificationId}</span>
+                        <span className="font-mono text-blue-700 text-xs">{kycData.verificationId}</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Selfie:</span>
-                        <span className="text-emerald-600">✓ Captured</span>
+                        <span className="text-blue-600">✓ Captured</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Document Front:</span>
-                        <span className="text-emerald-600">✓ Captured</span>
+                        <span className="text-blue-600">✓ Captured</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Document Back:</span>
-                        <span className="text-emerald-600">✓ Captured</span>
+                        <span className="text-blue-600">✓ Captured</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">ID Scan:</span>
-                        <span className="text-emerald-600">✓ Completed</span>
+                        <span className="text-blue-600">✓ Completed</span>
                       </div>
                     </div>
                   </div>
@@ -122,7 +122,7 @@ export const ThankYou: React.FC<ThankYouProps> = ({ kycData, onRestart, scannerT
                   <div className="space-y-2">
                     <button
                       onClick={handleDownloadReport}
-                      className="w-full bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-lg text-sm"
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 text-sm"
                     >
                       <Download className="w-4 h-4" />
                       Download Report
